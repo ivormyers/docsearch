@@ -38,6 +38,32 @@ class Handler implements URLHandler {
     public String handleRequest(URI url) throws IOException {
       return "Don't know how to handle that path!";
     }
+/*
+public String handleRequest(URI url) {
+        if (url.getPath().equals("/")) {
+            return String.format("There are"+getFiles() "files to search");
+        } else if (url.getPath().equals("/add")) {
+            String[] parts = url.getQuery().split("=");
+            storage.add(parts[1]);
+            counter++;
+            return String.format("String added!"+" Counter: "+Integer.toString(counter));
+        } else {
+            System.out.println("Path: " + url.getPath());
+            if (url.getPath().contains("/search")) {
+                String[] parameters = url.getQuery().split("=");
+                String willReturn ="";
+                for(int i=0;i<storage.size();i++){ 
+                    if (storage.get(i).contains(parameters[1])){ 
+                        willReturn += storage.get(i)+" ";
+                    }
+                }
+                return willReturn;
+            }
+            return "404 Not Found!";
+        }
+    }
+}
+  */  
 }
 
 class DocSearchServer {
